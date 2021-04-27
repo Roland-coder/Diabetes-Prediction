@@ -45,7 +45,7 @@ def predict():
     
     # Create the pandas DataFrame 
     new_df = pd.DataFrame(data, columns = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin','BMI', 'DiabetesPedigreeFunction', 'Age',])
-    single = model.predict(new_df)
+    single = model.predict(data)
     probability = model.predict_proba(new_df)[:,1]
     print(probability)
     if single==1.0:
