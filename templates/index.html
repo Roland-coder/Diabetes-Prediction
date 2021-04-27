@@ -1,50 +1,62 @@
-<!DOCTYPE html>
-<html >
-<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>ML API</title>
-  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-  
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
+   <body>
+      <title>Diabetes Prediction</title>
+	  <div class="container">
+		<div class="row">
 
-<body>
- <div class="login">
-  <h1>Predict Insurance Cost</h1>
-  
- <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1489&q=80" alt="Health Insurance" width="300" height="200">
-
- <br>
- <br>
- <br>
-
-     <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}"method="post">
-      <input type="number" name="pregnancies" placeholder="Pregnancies" required="required" />
-      <input type="number" name="glucose" placeholder="Glucose" required="required" />
-      <input type="number" name="bloodpressure" placeholder="Bloodpressure" required="required" />
-      <input type="number" name="skinthickness" placeholder="Skinthickness" required="required" />
-      <input type="number" name="insulin" placeholder="Insulin" required="required" />
-      <input type="number" name="bmi" placeholder="BMI" required="required" />
-      <input type="number" name="diabetespedigreefunction" placeholder="Diabetes Pedigree Function" required="required" />
-      <input type="number" name="age" placeholder="Age" required="required" />
-      
-   
-
-      <br>
-      <br>
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict Diabetes</button>
-    </form>
-
-   <br>
-   <br>
-   {{ prediction_text }}
-
- </div>
-
-
-</body>
+		  <form action="{{ url_for('predict')}}"method="post">
+		  	<div class="col-sm-9">
+			 <div class="form-group  purple-border">
+				  <label for="comment">Pregnancies</label>
+				  <textarea class="form-control" rows="2" id="query1" name="query1" rows="2" cols="5" autofocus>{{query1}}</textarea>
+			</div>
+			<div class="form-group  purple-border">
+				  <label for="comment">Glucose</label>
+				  <textarea class="form-control" rows="2" id="query2" name="query2" rows="2" cols="5" autofocus>{{query2}}</textarea>
+			</div>
+			<div class="form-group  purple-border">
+				  <label for="comment">Blood Pressure</label>
+				  <textarea class="form-control" rows="2" id="query3" name="query3" rows="2" cols="5" autofocus>{{query3}}</textarea>
+			</div>
+			<div class="form-group  purple-border">
+				  <label for="comment">Skin Thickness</label>
+				  <textarea class="form-control" rows="2" id="query4" name="query4" rows="2" cols="5" autofocus>{{query4}}</textarea>
+			</div>
+			<div class="form-group  purple-border">
+				  <label for="comment">Insulin</label>
+				  <textarea class="form-control" rows="2" id="query5" name="query5" rows="2" cols="5" autofocus>{{query5}}</textarea>
+			</div>
+			<div class="form-group  purple-border">
+					<label for="comment">BMI</label>
+					<textarea class="form-control" rows="2" id="query5" name="query6" rows="2" cols="5" autofocus>{{query5}}</textarea>
+			</div>
+			<div class="form-group  purple-border">
+					<label for="comment">Diabetes Pedigree Function</label>
+					<textarea class="form-control" rows="2" id="query5" name="query7" rows="2" cols="5" autofocus>{{query5}}</textarea>
+			</div>
+			<div class="form-group  purple-border">
+				<label for="comment">Age</label>
+				<textarea class="form-control" rows="2" id="query5" name="query8" rows="2" cols="5" autofocus>{{query5}}</textarea>
+		</div>
+			</div>
+			<div class="col-sm-3">
+			<button type="submit" class="btn btn-primary" name="submit">SUBMIT</button>
+			</div>
+		  </form>
+		  </div>
+		  
+		<div class="row"> 
+			<div class="col-sm-9">
+			<textarea class="form-control" rows="2" id="comment" name="query6" rows="2" cols="5" autofocus>{{output1}}</textarea>
+			<textarea class="form-control" rows="2" id="comment" name="query7" rows="2" cols="5" autofocus>{{output2}}</textarea>
+			</div>
+		</div>
+	</div>		
+   </body>
 </html>
