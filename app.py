@@ -39,11 +39,7 @@ def predict():
     
     
     data = [[inputQuery1, inputQuery2, inputQuery3, inputQuery4, inputQuery5, inputQuery6, inputQuery7, inputQuery8]]
-    #print('data is: ')
-    #print(data)
-    #016.14, 74.00, 0.01968, 0.05914, 0.1619
-    
-    # Create the pandas DataFrame 
+ 
     new_df = pd.DataFrame(data, columns = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin','BMI', 'DiabetesPedigreeFunction', 'Age',])
     single = model.predict(data)
     probability = model.predict_proba(new_df)[:,1]
@@ -56,7 +52,7 @@ def predict():
         o1 = "The patient does not have Diabetes"
         o2 = ""
     
-    return render_template('home.html', output1=o1, output2=o2, query1 = request.form['query1'], query2 = request.form['query2'],query3 = request.form['query3'],query4 = request.form['query4'],query5 = request.form['query5'],query6 = request.form['query6'],query7 = request.form['query7'],query8 = request.form['query8'])
+    return render_template('index.html', output1=o1, output2=o2, query1 = request.form['query1'], query2 = request.form['query2'],query3 = request.form['query3'],query4 = request.form['query4'],query5 = request.form['query5'],query6 = request.form['query6'],query7 = request.form['query7'],query8 = request.form['query8'])
     
 if __name__ == "__main__":
     app.run(debug=True)
