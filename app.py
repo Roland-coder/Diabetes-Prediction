@@ -38,7 +38,7 @@ def predict():
     
     
     
-    data = [[inputQuery1, inputQuery2, inputQuery3, inputQuery4, inputQuery5]]
+    data = [[inputQuery1, inputQuery2, inputQuery3, inputQuery4, inputQuery5, inputQuery6, inputQuery7, inputQuery8]]
     #print('data is: ')
     #print(data)
     #016.14, 74.00, 0.01968, 0.05914, 0.1619
