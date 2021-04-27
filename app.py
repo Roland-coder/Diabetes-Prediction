@@ -46,11 +46,11 @@ def predict():
     # Create the pandas DataFrame 
     new_df = pd.DataFrame(data, columns = ['pregnancies', 'glucose', 'bloodpressure', 'skinthickness', 'insulin', 'bmi', 'diabetespedigreefunction', 'age'])
     single = model.predict(new_df)
-    probability = model.predict_proba(new_df)[:,1]
+    # probability = model.predict_proba(new_df)[:,1]
     print(probability)
-    if single==1:
+    if single==1.0:
         o1 = "The patient has Diabetes"
-        o2 = "Confidence: {}".format(probability*100)
+        # o2 = "Confidence: {}".format(probability*100)
     else:
         o1 = "The patient does not have Diabetes"
         o2 = ""
