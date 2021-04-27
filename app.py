@@ -44,7 +44,7 @@ def predict():
     #016.14, 74.00, 0.01968, 0.05914, 0.1619
     
     # Create the pandas DataFrame 
-    new_df = pd.DataFrame(data, columns = ['pregnancies', 'glucose', 'bloodpressure', 'skinthickness', 'insulin', 'bmi', 'diabetespedigreefunction', 'age'])
+    new_df = pd.DataFrame(data, columns = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin','BMI', 'DiabetesPedigreeFunction', 'Age',])
     single = model.predict(new_df)
     # probability = model.predict_proba(new_df)[:,1]
     print(probability)
