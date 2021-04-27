@@ -50,6 +50,7 @@ def predict():
     print(probability)
     if single==1.0:
         o1 = "The patient has Diabetes"
+        o2 = ""
         # o2 = "Confidence: {}".format(probability*100)
     else:
         o1 = "The patient does not have Diabetes"
