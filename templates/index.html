@@ -8,53 +8,57 @@
    <body>
       <title>Diabetes Prediction</title>
 	  <div class="container">
+		<br>
+		<br>
+		<h2><center>Group1 Diabetes Prediction</center></h2>
 		<div class="row">
 
 		  <form action="{{ url_for('predict')}}"method="post">
 		  	<div class="col-sm-9">
 			 <div class="form-group  purple-border">
-				  <label for="comment">Pregnancies</label>
-				  <textarea class="form-control" rows="1" id="query1" name="query1" rows="1" cols="5" autofocus>{{query1}}</textarea>
+				  <label for="comment">Pregnancies (Integer values only)</label>
+				  <textarea class="form-control" rows="1" id="query1" name="query1" rows="2" cols="5" autofocus>{{query1}}</textarea>
 			</div>
 			<div class="form-group  purple-border">
-				  <label for="comment">Glucose</label>
-				  <textarea class="form-control" rows="1" id="query2" name="query2" rows="1" cols="5" autofocus>{{query2}}</textarea>
+				  <label for="comment">Glucose (Integer Values Only) </label>
+				  <textarea class="form-control" rows="1" id="query2" name="query2" rows="2" cols="5" autofocus>{{query2}}</textarea>
 			</div>
 			<div class="form-group  purple-border">
-				  <label for="comment">Blood Pressure</label>
-				  <textarea class="form-control" rows="1" id="query3" name="query3" rows="1" cols="5" autofocus>{{query3}}</textarea>
+				  <label for="comment">Blood Pressure (Integer Values Only) </label>
+				  <textarea class="form-control" rows="1" id="query3" name="query3" rows="2" cols="5" autofocus>{{query3}}</textarea>
 			</div>
 			<div class="form-group  purple-border">
-				  <label for="comment">Skin Thickness</label>
-				  <textarea class="form-control" rows="1" id="query4" name="query4" rows="1" cols="5" autofocus>{{query4}}</textarea>
+				  <label for="comment">Skin Thickness (Integer Values Only) </label>
+				  <textarea class="form-control" rows="1" id="query4" name="query4" rows="2" cols="5" autofocus>{{query4}}</textarea>
 			</div>
 			<div class="form-group  purple-border">
-				  <label for="comment">Insulin</label>
-				  <textarea class="form-control" rows="1" id="query5" name="query5" rows="1" cols="5" autofocus>{{query5}}</textarea>
+				  <label for="comment">Insulin (integer Values Only)</label>
+				  <textarea class="form-control" rows="1" id="query5" name="query5" rows="2" cols="5" autofocus>{{query5}}</textarea>
 			</div>
 			<div class="form-group  purple-border">
-					<label for="comment">BMI</label>
-					<textarea class="form-control" rows="1" id="query5" name="query6" rows="1" cols="5" autofocus>{{query5}}</textarea>
+					<label for="comment">BMI (Both Integer and Float) </label>
+					<textarea class="form-control" rows="1" id="query5" name="query6" rows="2" cols="5" autofocus>{{query5}}</textarea>
 			</div>
 			<div class="form-group  purple-border">
-					<label for="comment">Diabetes Pedigree Function</label>
-					<textarea class="form-control" rows="1" id="query5" name="query7" rows="1" cols="5" autofocus>{{query5}}</textarea>
+					<label for="comment">Diabetes Pedigree Function (Both Integer and Float)</label>
+					<textarea class="form-control" rows="1" id="query5" name="query7" rows="2" cols="5" autofocus>{{query5}}</textarea>
 			</div>
 			<div class="form-group  purple-border">
-				<label for="comment">Age</label>
-				<textarea class="form-control" rows="1" id="query5" name="query8" rows="1" cols="5" autofocus>{{query5}}</textarea>
+				<label for="comment">Age (Integer values Only) </label>
+				<textarea class="form-control" rows="1" id="query5" name="query8" rows="2" cols="5" autofocus>{{query5}}</textarea>
 		</div>
 			</div>
 			<div class="col-sm-3">
-			<button type="submit" class="btn btn-danger" name="submit">Predict Diabetes</button>
+			<button type="submit" class="btn btn-danger " name="submit">Predict Diabetes</button>
 			</div>
 		  </form>
 		  </div>
 		  
 		<div class="row"> 
 			<div class="col-sm-9">
-			<textarea class="form-control" rows="2" id="comment" name="query9" rows="2" cols="5" autofocus>{{output1}}</textarea>
-			<textarea class="form-control" rows="2" id="comment" name="query10" rows="2" cols="5" autofocus>{{output2}}</textarea>
+			<textarea class="form-control" rows="1" id="comment" name="query9" rows="2" cols="5" autofocus>{{output1}}</textarea>
+			<br>
+			<textarea class="form-control" rows="1" id="comment" name="query10" rows="2" cols="5" autofocus>{{output2}}</textarea>
 			</div>
 		</div>
 	</div>		
